@@ -22,15 +22,15 @@ See below for the examples of the commands, together with the output information
 
 
 2. node liri.js spotify-this-song '<song name here>'
-![song-search] (https://raw.githubusercontent.com/herbinmorn/LIRI-Bot/master/output%20info/song%20search.PNG)
+![song-search] (https://github.com/herbinmorn/LIRI-Bot/blob/master/output%20info/song%20search.PNG)
 
 
 3. node liri.js movie-this '<movie name here>'
-![movie-search]
+![movie-search](https://github.com/herbinmorn/LIRI-Bot/blob/master/output%20info/movie%20search.PNG)
 
 
 4. node liri.js do-what-it-says
-![do-what-it-says]
+![do-what-it-says](https://github.com/herbinmorn/LIRI-Bot/blob/master/output%20info/doWhatItSay%20search.PNG)
 
 
 Here is the deployed link: https://herbinmorn.github.io/LIRI-Bot/

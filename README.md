@@ -18,14 +18,21 @@ liri.js can take in one of the following commands:
 See below for the examples of the commands, together with the output information:
 
 1. node liri.js concert-this <artist/band name here>
-![GitHub concert-search] (https://github.com/herbinmorn/LIRI-Bot/blob/master/output%20info/concert%20search.PNG)
-Format: ![Alt Text](url)
+![concert-search] ( https://github.com/herbinmorn/LIRI-Bot/raw/master/output%20info/concert%20search.PNG)
+
 
 2. node liri.js spotify-this-song '<song name here>'
+![song-search] (https://raw.githubusercontent.com/herbinmorn/LIRI-Bot/master/output%20info/song%20search.PNG)
+
 
 3. node liri.js movie-this '<movie name here>'
+![movie-search]
+
 
 4. node liri.js do-what-it-says
+![do-what-it-says]
 
 
 Here is the deployed link: https://herbinmorn.github.io/LIRI-Bot/
+
+I am the only contributor of this app.

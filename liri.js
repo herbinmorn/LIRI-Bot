@@ -8,7 +8,7 @@ var spotify = new Spotify(keys.spotify);
 
 var quote = process.argv[2];
 
-var keyword = process.argv.slice(3).join('');
+var keyword = process.argv.slice(3).join("");
 
 var axios = require("axios");
 
@@ -43,18 +43,35 @@ if(quote === 'concert-this'){
 
 
     })
-}else if(quote === 'spotify-this-song'){
-    spotify.search({ type: 'track', query: keyword }, 
-    function(err, data) {
+} else if(quote === 'spotify-this-song'){
+    keyword = "'"+keyword+"'";
+    console.log(keyword);
+
+    spotify.search({type: 'track', query: keyword}, function(err, data) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-  //  console.log(data);
-    console.log('Artists: '+ data['album']['artists'][0][0]); 
-   // console.log('Name of the Song: ' + data['']
-// The song's name
-// A preview link of the song from Spotify
-// The album that the song is from
+    var items = data['tracks']['items'];
+    var limit = data['tracks']['limit'];
+    console.log("Total Number: "+items.length);
+    items.forEach(function(item, idx)
+    {
+        console.log('---------------------------------------------------');
+        //console.log(item);
+
+        var artists = '';
+        item['album']['artists'].forEach(function(artist,index)
+        {
+            if(artists.length>0) artists+=', ';
+            artists += artist['name'];
+        });
+    
+        console.log('Artists: '+ artists); 
+        console.log('Name of the Song: ' + item['name']);
+        console.log('Preview: ' + item['preview_url'])
+        console.log('Album: ' + item['album']['name']);
+    });
+
   });
 
 }else if(quote === 'do-what-it-says'){fs.readFile('random.txt', 'utf8', function(err, data){
